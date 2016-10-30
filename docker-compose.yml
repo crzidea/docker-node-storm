@@ -24,8 +24,6 @@ services:
             - nimbus
             - zookeeper
         restart: always
-        volumes:
-            - ./data:/data
     ui:
         image: crzidea/node-storm
         command: storm ui

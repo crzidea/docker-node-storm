@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+    zookeeper:
+        image: zookeeper:3.4
+        restart: always
+    nimbus:
+        image: crzidea/node-storm
+        command: storm nimbus
+        depends_on:
+            - zookeeper
+        links:
+            - zookeeper
+        restart: always
+        ports:
+            - 6627:6627
+    supervisor:
+        image: crzidea/node-storm
+        command: storm supervisor
+        depends_on:
+            - nimbus
+            - zookeeper
+        links:
+            - nimbus
+            - zookeeper
+        restart: always
+        volumes:
+            - ./data:/data
+    ui:
+        image: crzidea/node-storm
+        command: storm ui
+        depends_on:
+            - nimbus
+        links:
+            - nimbus
+        restart: always
+        ports:
+            - 8080:8080

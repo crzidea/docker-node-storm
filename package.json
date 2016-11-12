@@ -1,0 +1,22 @@
+{
+  "name": "docker-node-storm",
+  "version": "1.0.0",
+  "description": "Run Node.js on Apache Storm. See also:",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crzidea/docker-node-storm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crzidea/docker-node-storm/issues"
+  },
+  "homepage": "https://github.com/crzidea/docker-node-storm#readme",
+  "dependencies": {
+    "node-storm": "0.0.1"
+  }
+}

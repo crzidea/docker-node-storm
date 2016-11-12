@@ -1,6 +1,23 @@
 # Node.js on Storm
 
-Run Node.js on Apache Storm. See also:
+Run Node.js on Apache Storm. 
+
+## Run example
+
+```sh
+docker-compose up -d
+docker-compose run --rm nimbus bin/example.js
+open http://localhost:8080
+```
+
+Clean up:
+
+```sh
+docker-compose down -v
+```
+
+----
+See also:
 
 - [node-storm](https://github.com/RallySoftware/node-storm)
 - [storm-starter](https://github.com/apache/storm/tree/master/examples/storm-starter/multilang/resources)

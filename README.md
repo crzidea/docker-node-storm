@@ -2,11 +2,11 @@
 
 Run Node.js on Apache Storm. 
 
-## Run example
+## Run Example
 
 ```sh
 docker-compose up -d
-docker-compose run --rm nimbus bin/example.js
+docker-compose run --rm nimbus /resources/example.js nimbus
 open http://localhost:8080
 ```
 

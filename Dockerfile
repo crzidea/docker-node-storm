@@ -1,10 +1,10 @@
-FROM openjdk:8-jdk
+FROM openjdk:slim
 
 RUN apt-get update \
     && apt-get install -y python
 
 # Apache Storm
-ENV STORM_VERSION=1.0.3
+ENV STORM_VERSION=1.1.1
 ENV STORM_USER=storm \
     STORM_CONF_DIR=/conf \
     STORM_DATA_DIR=/data \
@@ -20,7 +20,7 @@ RUN set -x \
     && rm -r "$STORM_DISTRO.tar.gz"
 
 # Node.js
-ENV NODE_VERSION 7.8.0
+ENV NODE_VERSION 8.6.0
 ENV NPM_CONFIG_LOGLEVEL info
 
 RUN set -x \

@@ -1,7 +1,8 @@
 FROM openjdk:slim
 
 RUN apt-get update \
-    && apt-get install -y python
+    && apt-get install -y python curl \
+    && apt-get clean
 
 # Apache Storm
 ENV STORM_VERSION=1.1.1

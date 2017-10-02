@@ -16,7 +16,7 @@ RUN set -x \
     && useradd "$STORM_USER" \
     && mkdir -p "$STORM_CONF_DIR" "$STORM_DATA_DIR" "$STORM_LOG_DIR" \
     && chown -R "$STORM_USER:$STORM_USER" "$STORM_CONF_DIR" "$STORM_DATA_DIR" "$STORM_LOG_DIR" \
-    && curl -SLO "http://www.apache.org/dist/storm/$STORM_DISTRO/$STORM_DISTRO.tar.gz" \
+    && curl -SLO "https://www.apache.org/dist/storm/$STORM_DISTRO/$STORM_DISTRO.tar.gz" \
     && tar -xzf "$STORM_DISTRO.tar.gz" -C /usr/local --strip-components=1 \
     && rm -r "$STORM_DISTRO.tar.gz"
 

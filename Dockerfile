@@ -21,7 +21,7 @@ RUN set -x \
     && rm -r "$STORM_DISTRO.tar.gz"
 
 # Node.js
-ENV NODE_VERSION 8.6.0
+ENV NODE_VERSION 8.9.4
 ENV NPM_CONFIG_LOGLEVEL info
 
 RUN set -x \

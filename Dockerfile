@@ -5,7 +5,8 @@ RUN apt-get update \
     && apt-get clean
 
 # Apache Storm
-ENV STORM_VERSION=1.1.1
+ENV STORM_VERSION=1.0.5
+#ENV STORM_VERSION=1.1.1
 ENV STORM_USER=storm \
     STORM_CONF_DIR=/conf \
     STORM_DATA_DIR=/data \

@@ -1,7 +1,7 @@
 FROM openjdk:slim
 
 RUN apt-get update \
-    && apt-get install -y python curl \
+    && apt-get install -y python curl host \
     && apt-get clean
 
 # Apache Storm
